@@ -1,0 +1,84 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 15vh;
+    overflow: hidden;
+  }
+  
+  .new-collections h1 {
+    color: #171717;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  .new-collections hr {
+    width: 20%;
+    height: 0.05rem;
+    border-radius: 1rem;
+    background: #252525;
+  }
+  
+  .collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 10vh;
+    gap: 2rem;
+    width: fit-content;
+  }
+  
+  @media screen and (max-width: 1160px) {
+    .new-collections {
+      margin-top: 12vh;
+    }
+  
+    .new-collections h1 {
+      font-size: 2.5rem;
+    }
+    .collections {
+      margin-top: 5vh;
+      gap: 2.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .new-collections {
+      margin-top: 8vh;
+    }
+    .collections {
+      gap: 1.75rem;
+    }
+  }
+  
+  @media screen and (max-width: 960px) {
+    .collections {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .new-collections h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 820px) {
+    .collections {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .collection-wrapper {
+      width: 100%;
+      overflow-x: scroll;
+    }
+  }
+  
+  @media screen and (max-width: 820px) {
+    .collections {
+      display: flex;
+      align-self: flex-start;
+      overflow-x: hidden;
+      margin-top: 3vh;
+      padding: 0 5vw;
+    }
+  }
+  

@@ -1,25 +1,58 @@
-.item{
-    width: 350px;
-}
-.item p{
-    margin: 6px 0;
-}
-.item-prices{
+.item {
+    width: 18vw;
+    max-width: 350px;
+  }
+  
+  .item img {
+    width: 100%;
+  }
+  
+  .item p {
+    margin: 0.5rem 0;
+    width: 92%;
+  }
+  
+  .item-prices {
     display: flex;
-    gap: 20px;
-}
-.item-price-new{
+    gap: 0.5rem;
+  }
+  
+  .item-price-new {
     color: #374151;
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: 600;
-}
-.item-price-old{
+  }
+  
+  .item-price-old {
     color: #8c8c8c;
-    font-size: 18px;
-     font-weight: 500; 
-     text-decoration: line-through;
-}
-.item:hover{
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+  
+  .item:hover {
     transform: scale(1.05);
     transition: 0.6s;
-}
+  }
+  
+  @media screen and (max-width: 960px) {
+    .item {
+      width: 27vw;
+    }
+  }
+  
+  @media screen and (max-width: 820px) {
+    .item {
+      width: 40vw;
+    }
+    .item-price-new,
+    .item-price-old {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width:500px) {
+    .item {
+      width: 80vw;
+    }
+  }

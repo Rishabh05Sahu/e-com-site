@@ -1,72 +1,186 @@
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0 1px 3px -2px black;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 5vw;
+  box-shadow: 0 1px 3px -2px black;
+  align-items: center;
 }
-.nav-logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.nav-logo p{
-    color: #171717;
-    font-size: 38px;
-    font-weight: 600;
+
+.nav-logo img {
+  height: 3.5rem;
 }
- .nav-menu{
-    display: flex;
-    align-items: center; 
-    list-style: none;
-    gap: 50px;
-    color: #626262;
-    font-size: 20px; 
-    font-weight: 500;
- }
- .nav-menu li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.nav-logo p {
+  color: #171717;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+  color: #626262;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  cursor: pointer;
+}
+
+.nav-menu hr {
+  border: none;
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 10px;
+  background-color: #ff4141;
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-login-cart img {
+  height: 2.5rem;
+}
+
+.nav-login-cart button {
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 4rem;
+  padding: 0.5rem 1rem;
+  color: #515151;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}
+
+.nav-cart-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2.25rem;
+  margin-left: -2rem;
+  border-radius: 50%;
+  padding: 0 0.25rem;
+  font-size: 0.85rem;
+  background: red;
+  color: white;
+}
+
+.nav-dropdown {
+  display: none;
+  height: 1.75rem;
+}
+
+@media screen and (max-width: 1160px) {
+  .nav-menu {
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .nav-logo img{
+    height: 3rem;
+  }
+  .nav-login-cart img {
+    height: 2.5rem;
+  }
+
+  .nav-dropdown {
+    display: block;
+    rotate: -90deg;
+    transition: 0.5s;
+  }
+  .nav-menu {
+    display: none;
+    padding: 0.25rem 0 1rem;
+    width: 100%;
+    position: absolute;
+    background-color: white;
     justify-content: center;
-    gap: 3px;
-    cursor: pointer;
- }
- .nav-menu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background: #ff4141;
-}
-.nav-login-cart{
+    top: 3.5rem;
+    left: 0;
+  }
+  .nav-menu-visible {
     display: flex;
-    align-items: center;
-    gap: 45px;
+  }
+  .nav-dropdown.open {
+    transform: rotate(90deg);
+  }
 }
-.nav-login-cart button{
-    width: 157px;
-    height: 58px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
-    background: white;
+
+@media screen and (max-width: 640px) {
+  .nav-logo {
+    gap: 0;
+  }
+
+  .nav-logo img {
+    transform: scale(0.8);
+  }
+
+  .nav-logo p {
+    font-size: 1.25rem;
+  }
+
+  .nav-menu {
+    top: 4rem;
+  }
+
+  .nav-menu li {
+    font-size: 0.85rem;
+  }
+
+  .nav-login-cart button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+  .nav-login-cart {
+    transform: (0.6);
+  }
 }
-.nav-login-cart button:active{
-    background: #f3f3f3;
-}
-.nav-cart-count{
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -35px;
-    margin-left: -55px;
-    border-radius: 11px;
-    font-size: 14px;
-    background: red;
-    color: white;
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    gap: 0;
+  }
+  .nav-login-cart {
+    gap: 1rem;
+  }
+  .nav-login-cart button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+  .nav-login-cart img{
+    height: 2.25rem;
+  }
+
+  .nav-cart-count {
+    font-size: 0.75rem;
+  }
+
+  .nav-dropdown{
+    height: 1.25rem;
+  }
 }
