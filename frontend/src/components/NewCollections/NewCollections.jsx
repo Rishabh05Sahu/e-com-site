@@ -1,9 +1,22 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import "./NewCollections.css"
-import new_collection from "../../assets/new_collections"
+
 import Item from '../item/Item'
 
+
+
 const NewCollections = () => {
+    const [new_collection, setNew_Collection] = useState([])
+    const backendUrl= import.meta.env.VITE_APP_BACKEND_URL;
+  
+    useEffect(() => {
+        fetch(`${backendUrl}/newcollections`)
+            .then(response => response.json())
+            .then(data => setNew_Collection(data))
+           
+    }, []);
+    
+
     return (
         <div className='new-collections'>
             <h1>NEW COLLECTIONS</h1>
